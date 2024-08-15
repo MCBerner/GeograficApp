@@ -2,7 +2,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.RazorPages;
 using System.Reflection;
 
-namespace GeograficApp.Pages.CatalogCountries
+namespace GeograficApp.Pages
 {
     public class CountryViewModel : PageModel
     {
