@@ -103,6 +103,12 @@ namespace GeograficApp.Services
         public string Continent { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
         public string Description { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
         public string SpecielPlace { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        string ICountry.CountryName { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        string ICountry.Capital { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        string ICountry.City { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        string ICountry.Continent { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        string ICountry.Description { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        string ICountry.SpecielPlace { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
 
         public CountryJson()
         {
@@ -199,6 +205,41 @@ namespace GeograficApp.Services
         }
 
         public void AddCountry(ICountry country)
+        {
+            throw new NotImplementedException();
+        }
+
+        Dictionary<string, Country> ICountry.AllCountries()
+        {
+            throw new NotImplementedException();
+        }
+
+        Dictionary<string, Country> ICountry.FilterCountries(string criteria)
+        {
+            throw new NotImplementedException();
+        }
+
+        void ICountry.DeleteCountry(string countryName)
+        {
+            throw new NotImplementedException();
+        }
+
+        void ICountry.AddCountry(Country country)
+        {
+            throw new NotImplementedException();
+        }
+
+        void ICountry.UpdateCountry(Country country)
+        {
+            throw new NotImplementedException();
+        }
+
+        void ICountry.AddCountry(ICountry country)
+        {
+            throw new NotImplementedException();
+        }
+
+        Dictionary<int, Country> ICountry.FilterEvents(string filterCriteria)
         {
             throw new NotImplementedException();
         }

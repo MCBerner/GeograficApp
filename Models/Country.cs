@@ -14,10 +14,16 @@ namespace GeograficApp.Models
         public string Continent { get; set; }
         public string Description { get; set; }
         public string SpecielPlace { get; set; }
+        string ICountry.CountryName { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        string ICountry.Capital { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        string ICountry.City { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        string ICountry.Continent { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        string ICountry.Description { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        string ICountry.SpecielPlace { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
 
         private Dictionary<string, Country> countries = new Dictionary<string, Country>();
 
-        //public Country() {}
+        public Country() {}
 
 
         public Country(string countryName, string capital, string city, string continent, string description, string specielPlace)
@@ -88,6 +94,21 @@ namespace GeograficApp.Models
         }
 
         void ICountry.AddCountry(ICountry country)
+        {
+            throw new NotImplementedException();
+        }
+
+        Dictionary<string, Country> ICountry.AllCountries()
+        {
+            throw new NotImplementedException();
+        }
+
+        Dictionary<string, Country> ICountry.FilterCountries(string criteria)
+        {
+            throw new NotImplementedException();
+        }
+
+        Dictionary<int, Country> ICountry.FilterEvents(string filterCriteria)
         {
             throw new NotImplementedException();
         }

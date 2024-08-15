@@ -3,8 +3,81 @@
 @{
     ViewData["Title"] = "Lande";
 }
+<h1>Administrer events</h1>
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+<div class="Create-btn">
+    <a asp-page="CreateEvent" class="btn btn-primary">Opret ny event</a>
+</div>
+
+<div id="search">
+    <form>
+        <input type="text" asp-for="FilterCriteria" />
+        <input type="submit" value="Søg" />
+
+    </form>
+</div>
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                Event Navn
+            </th>
+            <th>
+                Beskrivelse
+            </th>
+            <th>
+                By
+            </th>
+            <th>
+                Dato og klokkeslæt
+            </th>
+            <th>
+                Antal tilmeldte
+            </th>
+            <th>
+
+            </th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model.Events)
+        {
+            <tr>
+                <td>
+                    @item.Value.CountryName
+                </td>
+                <td>
+                    @item.Value.Capital
+                </td>
+                <td>
+                    @item.Value.City
+                </td>
+
+                <td>
+                    @item.Value.Continent
+                </td>
+                <td>
+                    @item.Value.Description
+                </td>
+                <td>
+                    @item.Value.SpecielPlace
+                </td>
+                <td>
+                    <div class="button">
+                        <p>
+                            <a asp-page="UpdateEvent" asp-route-id="@item.Key" class="btn btn-secondary CRUD-btn">Opdater</a>
+                        </p>
+                        <p>
+                            <a asp-page="DeleteEvent" asp-route-id="@item.Key" class="btn btn-danger CRUD-btn">Slet</a>
+                        </p>
+                    </div>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<div class="back-btn">
+    <a asp-page="/Login/Administration" class="btn btn-primary">Tilbage til administration</a>
 </div>

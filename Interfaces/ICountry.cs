@@ -14,6 +14,7 @@ namespace GeograficApp.Interfaces
         void UpdateCountry(Country country);
         void GetCountry(string countryName);
         void AddCountry(ICountry country);
+        Dictionary<int, Country> FilterEvents(string filterCriteria);
 
         public string CountryName { get; set; }
         public string Capital { get; set; }
